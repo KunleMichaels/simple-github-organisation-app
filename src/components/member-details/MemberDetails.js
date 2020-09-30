@@ -24,7 +24,7 @@ function MemberDetails({ match }) {
           </div>
           <div className="user-info">
             <div className="account">
-              <h2 class="heading-2">{user.name}</h2>
+              <h2 className="heading-2">{user.name}</h2>
               <p>{user.bio}</p>
             </div>
             <div className="stat">
