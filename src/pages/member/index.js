@@ -1,5 +1,11 @@
 import React from "react";
+import { Container } from "react-bootstrap";
+import MemberDetails from "../../components/member-details/MemberDetails";
 
 export default function index() {
-  return <div></div>;
+  return (
+    <Container>
+      <MemberDetails />
+    </Container>
+  );
 }

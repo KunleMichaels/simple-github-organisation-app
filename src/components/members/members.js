@@ -1,4 +1,5 @@
 import React from "react";
+import { Spinner } from "react-bootstrap";
 import useFetchMembers from "../../hooks/useFetchMembers";
 import Member from "../member-component/MemberComponent";
 
@@ -9,7 +10,11 @@ function Members() {
 
   return (
     <div className="my-4 members-menu">
-      {loading && <h1>Loading....</h1>}
+      {loading && (
+        <div className="loader">
+          <Spinner animation="border" />
+        </div>
+      )}
       {error && <h1>Data not Found</h1>}
       {members.map(({ id, ...otherProps }) => {
         return <Member key={id} {...otherProps} />;
